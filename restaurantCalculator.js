@@ -11,10 +11,13 @@ const tax = (afterTax/totalBeforeTipAndTax) - 1
 const tip = (totalBill - (afterTax - totalBeforeTipAndTax))/totalBeforeTipAndTax - 1
 
 const calculator = () => {
+    console.log("Everyone owes the following:")
     for (let i = 0; i < values.length; i++){
         let afterTaxAndTip = Math.round((values[i] + (values[i] * tax) + (values[i] * tip)) * 100)/100
         console.log(`${names[i]}: ${afterTaxAndTip}`)
     }
+    console.log(`You paid ${Math.round(totalBeforeTipAndTax * tax * 100)/100} in tax and ${Math.round(totalBeforeTipAndTax * tip * 100)/100} in tip.`)
+    console.log(`You tipped ${Math.round(tip * 10000)/100}%.`)
 }
 
 calculator()
