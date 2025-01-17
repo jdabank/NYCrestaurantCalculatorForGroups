@@ -32,4 +32,4 @@ people.forEach((person) => {
     person.total =  Math.round(person.total * 100)/100
 })
 
-console.log(people)
+export default people.sort((a, b) => a.total - b.total)
