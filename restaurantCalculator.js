@@ -6,6 +6,12 @@ const values = [28.25, 28.25, 30.75, 38.75]
 //values are pre-tip and tax
 const totalBeforeTipAndTax = values.reduce((a, b) =>  a + b, 0)
 const names = ["Jordan", "Dan", "Andy", "Raf"]
+const namesAndPreTaxValues = [
+    { name: 'Jordan', total: 28.25 },
+    { name: 'Dan', total: 28.25 },
+    { name: 'Raf', total: 38.75 },
+    { name: 'Andy', total: 30.75 }
+  ]
 //should be a name for each value so value[index] belongs to name[index]
 const tax = (afterTax/totalBeforeTipAndTax) - 1
 const tip = (totalBill - (afterTax - totalBeforeTipAndTax))/totalBeforeTipAndTax - 1
